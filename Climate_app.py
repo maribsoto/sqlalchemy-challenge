@@ -47,7 +47,7 @@ def welcome():
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
         f"/api/v1.0/start_dates<br/>"
-        f"/api/v1.0/start_end_dates/<end>"
+        f"/api/v1.0/start_end_dates"
     )
 # IMPORTANT: Reading ALL the below dictionaries from Climate_Analysis_MBS.py and
 # returning as a json representation
@@ -116,7 +116,7 @@ def strt():
 # greater than and equal to the start date.
 ###################################################
 
-@app.route("/api/v1.0/start_end_dates/<end>")
+@app.route("/api/v1.0/start_end_dates")
 def start_end():
     """Jasonified MIN, AVG, MAX TOBS between Aug 1-20, 2017"""
     return end_stats_dict  
